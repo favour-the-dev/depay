@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeyPay | Contact Us</title>
+    <link rel="stylesheet" href="./global.css">
+    <script src="https://kit.fontawesome.com/cace72777c.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <script defer src="./app.js" ></script>
+    <style>
+        :root {
+        --gradient1: #7b4397;
+        --gradient2: #dc2430;
+        --topnavcolor: #222222;
+        --textcolor: #EEEEEE;
+        --max-cont-width: 120rem;
+        --card-color:  #191825;
+        --gradient3:  linear-gradient(90deg,var(--gradient1), var(--gradient2));
+        }
+        .signup {
+            width: 100%;
+            background: linear-gradient(90deg,var(--gradient1), var(--gradient2));
+            background-size: 300% 300%;
+            animation: animatebg 10s infinite ease-in-out;
+            padding: 1rem 6rem auto;
+            padding-bottom: 7rem;
+        }
+        .signup-container {
+            position: relative;
+            top: 3rem;
+            color: var(--textcolor);
+            text-align: center;
+            max-width: var(--max-cont-width);
+            width: 90%;
+            padding-top: 3rem;
+            margin: 0 auto 2rem;
+        }
+        .signup-container h1 {
+            text-transform: uppercase;
+            font-size: 3rem;
+            margin-bottom: 4rem;
+        }
+        .sighunp-form-group {
+            position: relative;
+            text-align: left;
+            width: 45%;
+            margin: 0 auto .5rem;
+        }
+        .sighunp-form-group h1{
+            text-transform: capitalize;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .sighunp-form-group input {
+            width: 100%;
+            border: none;
+            padding: 2rem;
+            border-radius: .5rem;
+            outline: none;
+            font-size: 2rem;
+        }
+        .signin {
+            background-color: #222222;
+            color: var(--gradient1);
+            width: 45%;
+            margin: 2rem auto 0;
+            text-transform: uppercase;
+            padding: 1rem;
+            border-radius: .5rem;
+            cursor: pointer;
+            outline: none;
+            font-size: 2rem;
+        }
+        .signin:hover {
+            background-color: #222222cb;
+        }
+        .sighunp-form-group.error input {
+            border: 3px solid red;
+        }
+        .sighunp-form-group.error .bad{
+            display: block;
+        }
+        .sighunp-form-group.error p {
+            display: block;
+        }
+        .sighunp-form-group.success input {
+            border: 3px solid green;
+        }
+        .sighunp-form-group.success .good{
+            display: block;
+        }
+        .valid {
+            position: absolute;
+            top: 7rem;
+        }
+        .good {
+            color: green;
+            right: .5rem;
+            display: none;
+        }
+        .bad {
+            color: red;
+            right: .8rem;
+            display: none;
+        }
+        .fa-sharp, .fa-solid, .fa-eye {
+            font-size: 1.4rem;
+        }
+        .see {
+            position: absolute;
+            top: 7rem;
+            right: 2rem;
+            color: rgba(128, 128, 128, 0.774);
+            font-size: 1.4rem;
+        }
+        .error-message {
+            color: red;
+            position: absolute; 
+            bottom: .4rem;
+            left: 2.5rem;
+            text-transform: uppercase;
+            display: none;
+        }
+        @media screen and (min-width: 320px) and (max-width: 960px) {
+            .sighunp-form-group {
+                width: 90%;
+            }
+            .signin {
+                width: 90%;
+            }
+            .error-message {
+                font-size: 1.3rem;
+            }
+        }
+        @media screen and (min-width: 320px) and (max-width:374px) {
+            .sighunp-form-group {
+                width: 100%;
+            }
+            .signin {
+                width: 100%;
+            }
+            .error-message {
+                font-size: 1.26rem;
+            }
+        }
+        /* <i class="fa-solid fa-eye-slash"></i> */
+    </style>
+</head>
+<body>
+    <div id="pre-loader">
+        <a href="" class="logo">
+            DeyPay
+        </a>
+    </div>
+    <header class="nav-container">
+        <nav class="navbar">
+            <div class="nav-logo-cont">
+                <a href="" class="logo">
+                    DeyPay
+                </a>
+                <div class="menu">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </div>
+            <div class="mainav">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./about.html" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./contact.html" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <div class="control">
+                    <a href="./signup.html" class="btn-signup">
+                        sign up
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="signup">
+        <div class="signup-container">
+            <h1>SIgn up</h1>
+            <form action="./joined.html" id="form">
+                <div class="sighunp-form-group">
+                    <label for="foremail">
+                        <h1>Email:</h1>
+                        <input type="email" name="foremail" id="emailsign" placeholder="Enter your email">
+                        <i class="fa-solid fa-check valid good"></i>
+                        <i class="fa-solid fa-xmark valid bad"></i>
+                        <p class="error-message">error</p>
+                    </label>
+                </div>
+                <div class="sighunp-form-group">
+                    <label for="forpassword">
+                        <h1>password:</h1>
+                        <input type="password" name="forpassword" id="password" placeholder="Enter your password">
+                        <i class="fa-solid fa-check valid good"></i>
+                        <i class="fa-solid fa-xmark valid bad"></i>
+                        <i class="fa-solid fa-eye-slash see"></i>
+                        <p class="error-message">error</p>
+                        <!-- fa-sharp fa-solid fa-eye -->
+                    </label>
+                </div>
+                <div class="sighunp-form-group">
+                    <label for="forconfirmedpassword">
+                        <h1>Confirm Password:</h1>
+                        <input type="password" name="forconfirmedpassword" id="confirm" placeholder="Confirm your password">
+                        <i class="fa-solid fa-check valid good"></i>
+                        <i class="fa-solid fa-xmark valid bad"></i>
+                        <i class="fa-solid fa-eye-slash see"></i>
+                        <p class="error-message">error</p>
+                    </label>
+                </div>
+                <button type="submit" class="signin">
+                        sign in
+                    </button>
+            </form>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <a href="./index.html" class="fl">
+                    DeyPay
+                </a>
+            </div>
+           <div class="grid">
+                <div class="products">
+                    <h4>Products</h4>
+                    <a href="" class="footer-navlink">DeyInvest</a>
+                    <a href="" class="footer-navlink">DeyTransact</a>
+                    <a href="" class="footer-navlink">DeySave</a>
+                    <a href="" class="footer-navlink">DeyTargetSavings</a>
+                </div>
+                <div class="company">
+                    <h4>company</h4>
+                    <a href="" class="footer-navlink">About</a>
+                    <a href="" class="footer-navlink">FAQ's</a>
+                    <a href="" class="footer-navlink">Blog</a>
+                </div>
+               <div class="legal">
+                <h4>legal</h4>
+                    <a href="" class="footer-navlink">Terms</a>
+                    <a href="" class="footer-navlink">Privacy</a>
+                    <a href="" class="footer-navlink">Security</a>
+               </div>
+           </div>
+           <div class="sm-links">
+            <a href="" class="sm">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="" class="sm">
+                <i class="fa-brands fa-square-twitter"></i>
+            </a>
+            <a href="" class="sm">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+           </div>
+           <div class="address">
+                <p> no 2 imaginary street, idea boy, port-harcourt.</p>
+                <p>favourto91@gmail.com</p>
+           </div>
+        </div>
+    </footer>
+    <script>
+        const passwrodview = document.querySelectorAll('.see');
+
+        passwrodview.forEach(viewer=>{
+            viewer.addEventListener('click', ()=>{
+                // viewer.className = 'fa-sharp fa-solid fa-eye see'
+                if (viewer.className === 'fa-solid fa-eye-slash see') {
+                    viewer.className = 'fa-sharp fa-solid fa-eye see'
+                }  else {
+                    viewer.className = 'fa-solid fa-eye-slash see'
+                }
+                // if (password.type === 'password') {
+                //     password.type = 'text'
+                // } else {
+                //     password.type = 'password'
+                // }
+                // if (confirmPassword.type === 'password') {
+                //     confirmPassword.type = 'text'
+                // } else {
+                //     confirmPassword.type = 'password'
+                // }
+                const parent = viewer.parentElement;
+                const inputpass = parent.querySelector('input');
+                if (inputpass.type === 'password') {
+                    inputpass.type = 'text'
+                } else {
+                    inputpass.type = 'password'
+                }
+            })
+        })
+        // signup validation
+        // getting form and al inouts
+        const form = document.querySelector('#form');
+        const email = document.querySelector('#emailsign');
+        const password = document.querySelector('#password');
+        const confirmPassword = document.querySelector('#confirm')
+
+        form.addEventListener('submit', e=>{
+            validateinputs();
+
+            if(isformvalid() === true) {
+                form.submit()
+            }else {
+                e.preventDefault()
+            }
+        })
+
+        function isformvalid() {
+            const formgroup = form.querySelectorAll('.sighunp-form-group')
+            let result = true;
+            formgroup.forEach(group=>{
+                if(group.classList.contains('error')) {
+                    result = false
+                }
+            })
+            return result   
+        }
+
+        function setError(element, message) {
+            const parent = element.parentElement.parentElement;
+            parent.classList.remove('success')
+            parent.classList.add('error')
+            const paragraph = parent.querySelector('p')
+            paragraph.innerText = message
+        }
+
+        function setSuccess(element) {
+            const parent = element.parentElement.parentElement;
+            parent.classList.remove('error')
+            parent.classList.add('success');
+        }
+        const emailregex = new RegExp("[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$");
+        function validateinputs() {
+                if (email.value.trim() === '') {
+                setError(email, 'email can not be empty!')
+                }else if (!email.value.match(emailregex)) {
+                    setError(email, 'email is not valid!')
+                }else {
+                    setSuccess(email)
+                }
+                // passoword
+                if(password.value.trim() === '') {
+                    setError(password, 'password can not be empty!')
+                }else if (password.value.length<8 || password.value.length>15) {
+                    setError(password, 'minimum characters is 8, and maximum is 15!')
+                }else {
+                    setSuccess(password)
+                }
+                //coonfirm password
+                if (confirmPassword.value.trim()==='') {
+                    setError(confirmPassword, 'Password can not be empty!')
+                } else if(confirmPassword.value === password.value) {
+                    setSuccess(confirmPassword)
+                }else {
+                    setError(confirmPassword, 'password not the same!')
+                }
+        }
+    </script>
+</body>
+</html>

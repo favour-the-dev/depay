@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeyPay | About Us</title>
+    <link rel="stylesheet" href="./global.css">
+    <script src="https://kit.fontawesome.com/cace72777c.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <script defer src="./app.js" ></script>
+    <style>
+    :root {
+        --gradient1: #7b4397;
+        --gradient2: #dc2430;
+        --topnavcolor: #222222;
+        --textcolor: #EEEEEE;
+        --max-cont-width: 120rem;
+        --card-color:  #191825;
+    }
+        .aboutus {
+            width: 100%;
+            background: linear-gradient(90deg,var(--gradient1), var(--card-color));
+            background-size: 300% 300%;
+            animation: animatebg 10s infinite ease-in-out;
+            padding: 1rem 4rem auto;
+            padding-bottom: 7rem;
+        }
+        .aboutus-text,.ourvision-text, .ourvalues-text, .joinus-text {
+            margin-bottom: 10rem;
+        }
+        .containerabout {
+            position: relative;
+            top: 3rem;
+            background-color: var(--topnavcolor);
+            color: var(--gradient1);
+            padding: 6rem 0rem;
+            text-align: center;
+            max-width: var(--max-cont-width);
+            width: 100%;
+            margin: 0 auto auto;
+            border: 5px solid var(--gradient1);
+            border-radius: 2rem;
+        }
+        .containerabout img {
+            width: 100%;
+            max-width: 30rem;
+            margin: auto auto;
+            margin-bottom: 3rem;
+        }
+        .containerabout h1 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        .containerabout p {
+            width: 70%;
+            margin: 0 auto;
+            font-size: 1.8rem;
+            text-align: left;
+            line-height: 2.5rem;
+        }
+        .value-grid {
+            margin-top: 2rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+        .card {
+            background-color: #191825;
+            width: 90%;
+            max-width: 40rem;
+            margin: 2rem auto 0;
+            padding: 2rem;
+            /* border: 3px solid var(--gradient1); */
+            border-radius: 2rem;
+            box-shadow: -5px 5px 3px 0px var(--gradient1);
+            transition: all ease;
+        }
+        .card:hover {
+            animation: movebg 2s  ease-in-out;
+        }
+        .joinus-text p {
+            margin-top: 2rem;
+            text-align: center;
+        }
+        .view-penroles {
+            margin-top: 3rem;
+            text-transform: uppercase;
+            background-color: transparent;
+            color: var(--gradient1);
+            border: 2px solid var(--gradient1);
+            padding: 1.5rem 3rem;
+            border-radius: 1rem;
+            cursor: pointer;
+            font-size: 1.9rem;
+            position: relative;
+        }
+        .view-penroles:hover {
+            background-color: var(--gradient1);
+            color: var(--card-color);
+        }
+        .view-penroles:after {
+            content: '>';
+            position: absolute;
+            top: 1.5rem;
+            right: 1.2rem;
+            font-size: 2rem;
+        }
+        .cta-btn-sigg {
+            width: 60%;
+            max-width: 30rem;
+            margin-top: 2rem;
+            text-transform: uppercase;
+            background-color: transparent;
+            color: var(--gradient1);
+            border: 2px solid var(--gradient1);
+            padding: 1.5rem 3rem;
+            border-radius: 1rem;
+            cursor: pointer;
+            font-size: 1.9rem;
+            position: relative;
+        }
+        .cta-btn-sigg:hover {
+            background-color: var(--gradient1);
+            color: var(--card-color);
+        }
+        @keyframes movebg{
+            0% {
+                transform: translate(1% 1%);
+            }
+            50% {
+                transform: translate(2.5%, 2.5%);
+            }
+            100% {
+                transform: translate(-2.5%, -2.5%);
+            }
+        }
+        
+        .card h3 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-transform: capitalize;
+            position: relative;
+        }
+        .six h3:before{
+            position: absolute;
+            content: '1';
+            min-height: 2rem;
+            text-align: center;
+            left: 2rem;
+        }
+        .five h3:before{
+            position: absolute;
+            content: '2';
+            min-height: 2rem;
+            text-align: center;
+            left: 2rem;
+        }
+        .four h3:before{
+            position: absolute;
+            content: '3';
+            min-height: 2rem;
+            text-align: center;
+            left: 2rem;
+        }
+        .three h3:before{
+            position: absolute;
+            content: '4';
+            min-height: 2rem;
+            text-align: center;
+            left: 2rem;
+        }
+        .two h3:before{
+            position: absolute;
+            content: '5';
+            min-height: 2rem;
+            text-align: center;
+            left: 2rem;
+        }
+        .one h3:before{
+            position: absolute;
+            content: '6';
+            min-height: 2rem;
+            text-align: center;
+            left: 2rem;
+        }
+        footer {
+        /* height: 50dvh; */
+        width: 100%;
+        background: linear-gradient(90deg,var(--gradient1), var(--card-color));
+        padding: 1rem;
+        background-size: 300% 300%;
+        animation: animatebg 10s infinite ease-in-out;
+       }
+       h4 {
+        color: var(--textcolor);
+       }
+       .fl {
+        color: var(--textcolor);
+       }
+       .sm {
+        color: var(--textcolor);
+       }
+        .footer-navlink{
+            color: var(--textcolor);
+        }
+        .address p {
+            color: var(--textcolor);
+        }
+        @media screen and (min-width: 325px) and (max-width: 734px) {
+            .value-grid {
+                grid-template-columns: auto;
+            }
+        }
+        @media screen and (min-width: 735px) and (max-width: 959px) {
+            .value-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media screen and (max-width: 960px) {
+            .card {
+                width: 80%;
+            }
+            .aboutus{
+                padding: 2rem;
+            }
+            /* .containerabout {
+                text-align: center;
+            } */
+        }
+    </style>
+</head>
+<body>
+    <div id="pre-loader">
+        <a href="" class="logo">
+            DeyPay
+        </a>
+    </div>
+    <header class="nav-container">
+        <nav class="navbar">
+            <div class="nav-logo-cont">
+                <a href="" class="logo">
+                    DeyPay
+                </a>
+                <div class="menu">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </div>
+            <div class="mainav">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./about.html" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./contact.html" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <div class="control">
+                    <a href="./signup.html" class="btn-signup">
+                        sign up
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="aboutus">
+        <div class="containerabout">
+            <img src="./assets/images and illust/undraw_about_us_page_re_2jfm.svg" alt="">
+            <div class="aboutus-text">
+                <h1>About us</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, voluptatibus. Fugiat ducimus accusamus laudantium ipsam vel cumque est dolore, inventore hic deserunt suscipit, reprehenderit nesciunt tenetur a, nisi libero molestias!</p>
+            </div>
+            <div class="ourvision-text">
+                <img src="./assets/images and illust/undraw_shared_goals_re_jvqd.svg" alt="">
+                <h1>our vision</h1>
+                <p> <b>Pioneer. Digitize. Include</b></p>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum perferendis incidunt nam architecto iusto laudantium! Accusantium quo esse excepturi velit ducimus asperiores obcaecati tempore mollitia ipsam expedita vitae quia, aliquid culpa voluptatum eos commodi quidem autem facere illum numquam in similique laudantium quibusdam ut! Eligendi?</p>
+            </div>
+            <div class="ourvalues-text">
+                <img src="./assets/images and illust/undraw_work_together_re_5yhn.svg" alt="">
+                <h1>our values</h1>
+                <h2>More than a comapny, we proritize family.</h2>
+                <div class="value-grid">
+                    <div class="card six">
+                        <h3>Teamwork</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, natus.</p>
+                    </div>
+                    <div class="card five">
+                        <h3>Customer care</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, natus.</p>
+                    </div>
+                    <div class="card four">
+                        <h3>Family feel</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, natus.</p>
+                    </div>
+                    <div class="card three">
+                        <h3>Transparency</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, natus.</p>
+                    </div>
+                    <div class="card two">
+                        <h3>Respect</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, natus.</p>
+                    </div>
+                    <div class="card one">
+                        <h3>Ownership</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, natus.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="joinus-text">
+                <h1>Join our team</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus veniam odit voluptatum? Sit possimus vero sed non tempora magni quo repellendus omnis dolores, eos natus quis. At quidem animi reiciendis.</p>
+                <button class="view-penroles">
+                    view open roles
+                </button>
+            </div>
+            <div class="createacc">
+                <h1>ready to get started?</h1>
+                <button class="cta-btn-sigg">
+                    Sign up
+                </button>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <a href="./index.html" class="fl">
+                    DeyPay
+                </a>
+            </div>
+           <div class="grid">
+                <div class="products">
+                    <h4>Products</h4>
+                    <a href="" class="footer-navlink">DeyInvest</a>
+                    <a href="" class="footer-navlink">DeyTransact</a>
+                    <a href="" class="footer-navlink">DeySave</a>
+                    <a href="" class="footer-navlink">DeyTargetSavings</a>
+                </div>
+                <div class="company">
+                    <h4>company</h4>
+                    <a href="" class="footer-navlink">About</a>
+                    <a href="" class="footer-navlink">FAQ's</a>
+                    <a href="" class="footer-navlink">Blog</a>
+                </div>
+               <div class="legal">
+                <h4>legal</h4>
+                    <a href="" class="footer-navlink">Terms</a>
+                    <a href="" class="footer-navlink">Privacy</a>
+                    <a href="" class="footer-navlink">Security</a>
+               </div>
+           </div>
+           <div class="sm-links">
+            <a href="" class="sm">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="" class="sm">
+                <i class="fa-brands fa-square-twitter"></i>
+            </a>
+            <a href="" class="sm">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+           </div>
+           <div class="address">
+                <p> no 2 imaginary street, idea boy, port-harcourt.</p>
+                <p>favourto91@gmail.com</p>
+           </div>
+        </div>
+    </footer>
+</body>
+</html>

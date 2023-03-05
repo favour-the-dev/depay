@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeyPay | Contact Us</title>
+    <link rel="stylesheet" href="./global.css">
+    <script src="https://kit.fontawesome.com/cace72777c.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <script defer src="./app.js" ></script>
+    <style>
+        :root {
+        --gradient1: #7b4397;
+        --gradient2: #dc2430;
+        --topnavcolor: #222222;
+        --textcolor: #EEEEEE;
+        --max-cont-width: 120rem;
+        --card-color:  #191825;
+        }
+        footer {
+        /* height: 50dvh; */
+        width: 100%;
+        background: linear-gradient(90deg,var(--gradient2), var(--card-color));
+        padding: 1rem;
+        background-size: 300% 300%;
+        animation: animatebg 10s infinite ease-in-out;
+       }
+        .contactus {
+            width: 100%;
+            background: linear-gradient(90deg,var(--gradient2), var(--card-color));
+            background-size: 300% 300%;
+            animation: animatebg 10s infinite ease-in-out;
+            padding: 1rem 6rem auto;
+            padding-bottom: 7rem;
+        }
+        .container-contact {
+            position: relative;
+            top: 3rem;
+            background-color: var(--topnavcolor);
+            color: var(--gradient2);
+            padding: 6rem 1rem;
+            text-align: center;
+            max-width: var(--max-cont-width);
+            width: 90%;
+            margin: 0 auto auto;
+            border: 5px solid var(--gradient2);
+            border-radius: 2rem;
+        }
+        .container-contact h1 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .contact-img {
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+        .contact-img img {
+            width: 100%;
+            max-width: 60rem;
+            margin: auto auto;
+            margin-bottom: 3rem;
+        }
+        .contact-form {
+            border-left: 3px solid var(--gradient2);
+            padding-left: 2rem;
+        }
+        .form-group {
+            text-align: left;
+            margin-bottom: 1rem;
+        }
+        .form-group h3 {
+            font-size: 1.5rem;
+        }
+        .form-group input, textarea {
+            width: 70%;
+            padding: 1rem;
+            outline: none;
+            background-color: var(--topnavcolor);
+            border: 1px solid var(--gradient2);
+            color: var(--textcolor);
+        }
+        .form-group button {
+            background-color: var(--gradient2);
+            color: var(--textcolor);
+            width: 80%;
+            padding: 1rem;
+            font-size: 2rem;
+            text-transform: uppercase;
+            border-radius: 1rem;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #dc243069;
+        }
+        @media screen and (min-width: 320px) and (max-width: 734px) {
+            .contact-grid {
+                grid-template-columns: auto;
+            }
+            .contact-img img {
+                max-width: 40rem;
+            }
+            .contact-form {
+                border: none;
+            }
+        }
+    </style>
+</head>
+<div id="pre-loader">
+    <a href="" class="logo">
+        DeyPay
+    </a>
+</div>
+<body>
+    <header class="nav-container">
+        <nav class="navbar">
+            <div class="nav-logo-cont">
+                <a href="" class="logo">
+                    DeyPay
+                </a>
+                <div class="menu">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </div>
+            <div class="mainav">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./about.html" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./contact.html" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <div class="control">
+                    <a href="./signup.html" class="btn-signup">
+                        sign up
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="contactus">
+        <div class="container-contact">
+            <h1>contact us</h1>
+            <div class="contact-grid">
+                <div class="contact-img">
+                    <img src="./assets/images and illust/undraw_contact_us_re_4qqt.svg" alt="">
+                </div>
+                <div class="contact-form">
+                    <form action="/">
+                        <div class="form-group">
+                            <label for="forname" class="label">
+                                <h3>Full name:</h3>
+                                <input type="text" placeholder="Enter your full name" name="forname">
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label for="foremail" class="label">
+                                <h3>Email:</h3>
+                                <input type="email" placeholder="Enter your email" name="foremail">
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label for="forsubject" class="label">
+                                <h3>Subject:</h3>
+                                <input type="text" placeholder="Enter your subject" name="forsubject">
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label for="fortext" class="label">
+                                <h3>Message:</h3>
+                                <textarea name="fortext" id="" cols="30" rows="10" placeholder="Enter your message"></textarea>
+                            </label>
+                        </div>
+                       <div class="form-group">
+                          <button class="submit">
+                            Send
+                          </button>
+                       </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <a href="./index.html" class="fl">
+                    DeyPay
+                </a>
+            </div>
+           <div class="grid">
+                <div class="products">
+                    <h4>Products</h4>
+                    <a href="" class="footer-navlink">DeyInvest</a>
+                    <a href="" class="footer-navlink">DeyTransact</a>
+                    <a href="" class="footer-navlink">DeySave</a>
+                    <a href="" class="footer-navlink">DeyTargetSavings</a>
+                </div>
+                <div class="company">
+                    <h4>company</h4>
+                    <a href="" class="footer-navlink">About</a>
+                    <a href="" class="footer-navlink">FAQ's</a>
+                    <a href="" class="footer-navlink">Blog</a>
+                </div>
+               <div class="legal">
+                <h4>legal</h4>
+                    <a href="" class="footer-navlink">Terms</a>
+                    <a href="" class="footer-navlink">Privacy</a>
+                    <a href="" class="footer-navlink">Security</a>
+               </div>
+           </div>
+           <div class="sm-links">
+            <a href="" class="sm">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="" class="sm">
+                <i class="fa-brands fa-square-twitter"></i>
+            </a>
+            <a href="" class="sm">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+           </div>
+           <div class="address">
+                <p> no 2 imaginary street, idea boy, port-harcourt.</p>
+                <p>favourto91@gmail.com</p>
+           </div>
+        </div>
+    </footer>
+</body>
+</html>
